@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Yahooo & Google Retro</title>
+</head>
+<body>
+
+    <div style="text-align: center; margin-bottom: 1em; margin: 1em;">
+        <img src="img/new.png" style="height: 42px" alt="">
+        <img src="img/cool.png" style="height: 42px" alt="">
+        <img src="img/yaahoo.png" style="height: 42px" alt="">
+        <img src="img/news.png" style="height: 42px" alt="">
+        <img src="img/more.png" style="height: 42px" alt="">
+    </div>
+
+    <div style="text-align: center; margin-bottom: 1em;">
+        <a href="#">Yahooo! Finance</a>
+        <a href="#">Net Radio</a>
+        <a href="#">World Series</a>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 1em;">
+        <!-- <form action="" method="POST"> -->
+            <input type="text">
+            <button>Submit</button>
+            <a href="#">Options</a>
+        <!-- </form> -->
+    </div>
+
+    <div style="text-align: center; margin-bottom: 1em;">
+        <a href="#">Yellow Pages</a> - 
+        <a href="#">People Search</a> - 
+        <a href="#">City Maps</a> - 
+        <a href="#">Stock Quotes</a> - 
+        <a href="#">Sports Scores</a>
+    </div>
+
+    <div style="line-height: 2.25em;">
+        <ul>
+            <li>
+                <a href="#"><strong>Arts and Humanities</strong></a> -
+                <a href="#">Architecture</a>,
+                <a href="#">Photography</a>,
+                <a href="#">Literature</a>...
+            </li>
+            <li>
+                <a href="#"><strong>Arts and Humanities</strong></a> -
+                <a href="#">Architecture</a>,
+                <a href="#">Photography</a>,
+                <a href="#">Literature</a>...
+            </li>
+            <li>
+                <a href="#"><strong>Arts and Humanities</strong></a> -
+                <a href="#">Architecture</a>,
+                <a href="#">Photography</a>,
+                <a href="#">Literature</a>...
+            </li>
+            <li>
+                <a href="#"><strong>Arts and Humanities</strong></a> -
+                <a href="#">Architecture</a>,
+                <a href="#">Photography</a>,
+                <a href="#">Literature</a>...
+            </li>
+            <li>
+                <a href="#"><strong>Arts and Humanities</strong></a> -
+                <a href="#">Architecture</a>,
+                <a href="#">Photography</a>,
+                <a href="#">Literature</a>...
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div style="text-align: center;">
+        <a href="#">Yahooligans!</a> -
+        <a href="#">Yahoo! Shop</a> -
+        <a href="#">Yahoo! Internet Life</a><br>
+        <br>
+        <a href="#">Daily Picks</a> -
+        <a href="#">Random Yahoo! Link</a> -
+        <a href="#">Weekly Picks</a>
+    </div>
+
+    <hr>
+
+    <div style="text-align: center">
+
+        <h1>Sign up for Yaahoo!</h1>
+
+        <div>
+            <form action="" method="post">
+                <input type="text" name="full_name" required placeholder=" full name"><br>
+                <input type="email" name="email" required placeholder=" email"><br>
+                <input type="password" minlength="6" name="password" required placeholder=" password"><br>
+                <input type="number" min="18" name="age" required placeholder=" age in years"><br>
+                <select name="heard_of" required>
+                    <option value="" selected>Please select an option</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="search">Search engine</option>
+                    <option value="friend">Friend's recommendation</option>
+                </select><br>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+    </div> 
+    
+    <hr>
+
+    <div style="text-align: center">
+        <img src="img/google_retro.png" alt="">
+    </div>
+
+    <div style="text-align: center; background-color: beige; padding: 1em;">
+        <p><strong>Search the web using Google!</strong></p>
+        <input type="text"><br>
+        <div style="margin: 1em; text-align: center;">
+            <button style="margin-right: .5em; border-radius: 5px;">Google Search</button>
+            <button style="margin-right: .5em; border-radius: 5px;">I'm feeling lucky</button>
+        </div>
+    </div>
+    <table width="100%">
+        <tr>
+            <td style="text-align: center; background-color:darkseagreen" width="20%">
+                <a href="">Special Searches</a><br>
+                <a href="">Standford Search</a><br>
+                <a href="">Linux Search</a><br>
+            </td>
+            <td style="text-align: center; background-color:greenyellow" width="20%">
+                    <a href="">help!</a><br>
+                    <a href="">About Google!</a><br>
+                    <a href="">Company Info</a><br>
+                    <a href="">Google! Logos</a><br>
+            </td>
+            <td style="text-align: center; background-color:green" width="60%">
+                Get Google! <br>
+                updates monthly: <br>
+                <input type="text" placeholder="your e-mail">
+                <button>Subscribe</button> <a href="">Archive</a>
+            </td>
+        </tr>
+    </table>
+    <div style="text-align: center;margin-top: .5em;">
+            Copyright Goooogle 1998!
+        </div>
+        
+        
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+    <script>
+        
+        $(document).ready(function () {
+
+            $("form").submit(function (e) {
+                e.preventDefault()
+
+                const $inputs = $('form :input');
+
+                let values = {}
+                $inputs.each(function () {
+                    if (this.name) {
+                        values[this.name] = $(this).val();
+                    }
+                })
+
+                alert(JSON.stringify(values, null, 2))
+
+                return false
+            })
+        });
+
+    </script>
+
+</body>
+</html>
